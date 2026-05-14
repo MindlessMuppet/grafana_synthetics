@@ -1,0 +1,12 @@
+terraform {
+  required_providers {
+    grafana = { source = "grafana/grafana" }
+  }
+}
+
+provider "grafana" {
+  url             = "https://mindlessmuppet.grafana.net/"
+  auth            = var.grafana_service_token
+  sm_url          = "https://synthetic-monitoring-api-gb-south-1.grafana.net"
+  sm_access_token = var.sm_access_token
+}
