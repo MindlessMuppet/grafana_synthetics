@@ -1,9 +1,3 @@
-terraform {
-  required_providers {
-    grafana = { source = "grafana/grafana" }
-  }
-}
-
 provider "grafana" {
   url             = "https://mindlessmuppet.grafana.net/"
   auth            = var.grafana_service_token
